@@ -1,33 +1,25 @@
-## Inventory Management Console Based Application using Java
+# Inventory Management Console Based Application using Java
 
-Inventory Management System is one of the most famous mini project which is asked to create from a new programming language learner.
-The inventory can be of any type, like Tea Shop, Water Can, Flower, Bank, etc. This program is nothing but a type of bookkeeping program 
-, which can be used to keep track of inventory items and sells. 
+An Inventory Management System is a quintessential mini-project for new learners of any programming language. The inventory can pertain to various types, such as a Tea Shop, Water Can, Flower Shop, Bank, etc. Essentially, it's a form of bookkeeping program used to track inventory items and sales.
 
-We cannot learn any programming languages without proper practice. Now practice can be of two types also, one is practicing the concepts one by one as we
-read. This is a good practice but in real projects the challenge will come when we have to implement one concept with another
-concept and also keeping in mind that it should affect already written codes and other functionalities. That is why the 
-other way to practice is to create mini projects. While creating these projects we will face many such problems which I 
-mentioned before but since it will a small project then it will be easy to grasp those concepts. Hence, the motive behind practicing creating any
-inventory management application is to solidify the core concepts of Core Java.
+Learning any programming language involves proper practice. While practicing individual concepts sequentially is beneficial, real-world projects present challenges that require integrating multiple concepts seamlessly without disrupting existing code. Thus, creating mini-projects becomes the most effective way to practice and solidify core Java concepts.
 
-Now the question arises that what are the concepts you need to know in order to create your own inventory management application:
-- Object-Oriented Programming(OOP)
+To embark on creating your own inventory management application, it's essential to grasp the following core concepts:
+**Object-Oriented Programming(OOP)**
   - Abstraction
   - Inheritance
   - Abstraction
   - Polymorphism
-- Classes and Objects
-- Interfaces
-- Exception Handling
+- **Classes and Objects**
+- **Interfaces**
+- **Exception Handling**
 
-So, if you already have learned all these concepts then for a POC, you can go ahead with creating your own inventory
-management application.
+Once you have learned all these concepts then you are ready to proceed with your Proof Of Concept(POC) project
 
 Now to get started with the project there are 3 main steps.
-- Requirement Gathering
-- Class Diagram
-- Code
+- **Requirement Gathering**
+- **Class Diagram**
+- **Code**
 
 ### Requirement Gathering
 Requirement Gathering is the most important step here. The reason is all your code and project design will depend on how
@@ -36,9 +28,9 @@ with creating the class diagram for it. But in few cases, if the same is not pro
 your mind, covering the core functionalities and flow of the program.
 For example, in Water Can Inventory Management, you can either think from a perspective of customer or owner. Let's think from an Owner's
 perspective. 
-- Water Can inventory will have an Owner.
-- In inventory there will be types of Water Cans like 1 litre, 5 litre, 10 litre and 25 litre.
-- An owner can either sell or stock new water cans.
+- **WaterCan** inventory will have an **Owner**.
+- In inventory there will be different **types of Water Cans like 1 litre, 5 litre, 10 litre and 25 litre**.
+- An owner can either **sell** or **stock** new water cans.
 
 Now this is very small perspective of how Water Can Inventory should work. But depending on the size of the project which you
 want to create, you can add new functionalities to the requirement.
