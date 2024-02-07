@@ -14,7 +14,7 @@ public class ConcurrentModification {
         }
         while(true){
             try {
-                System.out.println("Press 1: Concurrent Modification(Throws error)\n" +
+                System.out.println("Press 1: Concurrent Modification using for each loop(Throws error)\n" +
                         "Press 2: Concurrent Modification using for loop\n" +
                         "Press 3: Concurrent Modification using Iterator\n" +
                         "Press 4: Exit");
@@ -30,6 +30,8 @@ public class ConcurrentModification {
                 System.out.println("Cannot modify the list while iterating using for each loop");
             } catch (RuntimeException runtimeException){
                 System.out.println(runtimeException.toString());
+            } catch (Exception exception){
+                System.out.println(exception.getCause().toString());
             }
         }
     }
@@ -40,6 +42,7 @@ public class ConcurrentModification {
         byte option = scanner.nextByte();
         if(option == 1) {
             while(integerListIterator.hasNext()){
+                integerListIterator.next();
                 integerListIterator.remove();
             }
         } else if (option == 2) {
