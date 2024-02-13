@@ -23,6 +23,7 @@ public class ConsumerRunner {
             numberList.add(scanner.nextInt());
         }
         System.out.println("Press 1: Modify List, Press 2: Display List");
+        int option = scanner.nextInt();
 
     }
 }
