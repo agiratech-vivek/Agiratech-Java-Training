@@ -24,4 +24,9 @@ public class Players {
     public void setCarName(String carName) {
         this.carName = carName;
     }
+
+    @Override
+    public String toString() {
+        return "Player name: " + this.name + "\nCar name: " + this.carName;
+    }
 }
