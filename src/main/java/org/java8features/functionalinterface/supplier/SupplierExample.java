@@ -39,7 +39,7 @@ public class SupplierExample {
             // getting the integer value using get function.
             secondPlayerPosition += secondPlayerDiceNumber.get();
             System.out.println(firstPlayer + " got " + firstPlayerDiceNumber);
-            System.out.println(secondPlayer + " got " + secondPlayerDiceNumber);
+            System.out.println(secondPlayer + " got " + secondPlayerDiceNumber.get());
             System.out.println();
         }
         return firstPlayerPosition;

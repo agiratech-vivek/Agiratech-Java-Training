@@ -4,6 +4,7 @@ public class User {
     private long id;
     private String name;
     private String contact;
+    private boolean isRegistered;
 
     public User() {
     }

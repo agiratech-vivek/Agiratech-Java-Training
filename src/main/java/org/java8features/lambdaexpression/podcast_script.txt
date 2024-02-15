@@ -1,0 +1,46 @@
+Vivek:  Hello Arun, How are you?
+Arun:   I am doing fine. and Hey Harsha.
+Harsha: Hey Arun, Vivek.
+Vivek:  So whats been going on lately in Agira with you guys.
+Arun:   I have been learning about Java 8 features, It's good that Java decided to deep dive in functional programming with their 1.8 version. but I have a doubt in Lambda Expression.
+
+Harsha: So, What is Lambda Expression?
+        Lambda Expression is a concise way to write implementation of anonymous class on the go.
+        This is similar to arrow function of Javascript.
+        They are typically used for short, single expression function, but they can be used to give more complex logic also.
+        The basic structure of Lambda Expression is that they have parameter in small brackets then -> a hyphen and arrow
+        followed by curly braces in which we can provide the function logic.
+
+Vivek:  Though there is a small limitation, Lambda Expression works with Functional Interface only.
+        So, the question comes, What is functional interface?
+        Functional interfaces are the interfaces with just one abstract method inside it. So while using lambda expression,
+        the JVM knows exactly which function to call to run.
+
+Harsha: Yeah you are right, also talking about the syntax of lambda expression, apart from the arrow, other
+        syntax is optional in   Lambda. Like, if we have just one parameter, then small brackets are not necessary, also
+        if function logic is of one line then curly braces are not necessary.
+
+Arun:   Okay got it Harsha, hey Vivek but what are the benefits of Lambda Expression?
+
+Vivek:  Well, there are many benefits of using Lambda Expression.
+        First is conciseness: Due to the optional syntax and providing the implementation on the go, it makes the code concise easier to read.
+        Then Functional Programming: Like we talked earlier that Java 8 focuses on achieving the functional programming.
+        So, Lambda expression is a way to achieve that, this also
+        make the code easier to test.
+        Lastly It improves Performance: In some cases, lambda expression can lead to better performance than anonymous inner class.
+
+Arun:   How does it provide improved performance?
+        Reason is, in traditional inner classes, there's overhead with creating and invoking a new class instance. Lambda Expression
+        eliminates this overhead, leading to potentially faster execution for short, simple functions.
+
+Arun:   Can you elaborate on how there is an overhead with creating and invoking a new class instance.
+
+Harsha: Okay so, earlier if we had to provide implementation of an interface, we had to first implement the interface in the
+        class, and then we had to provide the function definition of the abstract method of interface. and later wherever we had to
+        use the method, then we have to first create the object of class and then call the method using it.
+        So can you see the overhead and amount of work we had to do.
+
+Vivek:  Yeah Harsha, that's one of the main reason!! We are using Lambda expressions.
+
+Arun:   Yeah, Thank you for explaining that. It cleared my doubt.
+Vivek:

@@ -2,6 +2,7 @@ package org.java8features.optionalclass;
 
 import java.util.Optional;
 import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class UserRunner {
     public static void main(String[] args) {
@@ -36,6 +37,11 @@ public class UserRunner {
         System.out.println("Please enter user name");
         String name = scanner.nextLine();
         Optional<User> userByName = UserRepository.getUserByName(name);
+        AtomicReference<String> userName = new AtomicReference<>("");
+        Optional<AtomicReference<String>> stringAtomicReference = userByName.map(user -> {
+            userName.set(user.getName());
+            return userName;
+        });
         userByName.ifPresent(System.out::println);
         userByName.orElse(new User());
     }
