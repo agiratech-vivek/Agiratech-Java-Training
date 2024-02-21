@@ -1,4 +1,4 @@
-package org.java8features.streams;
+package org.java8features.streams.streamssimple;
 
 public class ConcertTicket {
     private String userName;

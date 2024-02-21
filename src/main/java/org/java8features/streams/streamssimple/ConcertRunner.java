@@ -1,4 +1,4 @@
-package org.java8features.streams;
+package org.java8features.streams.streamssimple;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -20,7 +20,7 @@ public class ConcertRunner {
         }
         while (true) {
             System.out.println("Press 1: Set and view Gold Seats\nPress 2: Set and view Platinum Seats" +
-                    "\nPress 3: Set All Seats\nPress 4: Display Seats\nPress 5: Exit");
+                    "\nPress 3: Set All Seats\nPress 4: Display Seats\nPress 5: Fetch VIPs\nPress 6: Cancel Ticket\nPress7: Exit");
             option = scanner.nextInt();
             if (option == 1) {
                 setGoldSeats(ticketRepository);
@@ -30,16 +30,29 @@ public class ConcertRunner {
                 setAllSeats(ticketRepository);
             } else if (option == 4) {
                 displaySortedTicket(ticketRepository);
-            } else {
-                break;
+            } else if(option == 5){
+                fetchVipPeople(ticketRepository);
+            } else if(option == 6){
+                cancelAndDeleteTicketByName(ticketRepository, scanner);
             }
         }
+    }
+
+    private static void cancelAndDeleteTicketByName(List<ConcertTicket> ticketRepository, Scanner scanner) {
+        System.out.println("Please enter a user name");
+    }
+
+    private static void fetchVipPeople(List<ConcertTicket> ticketRepository) {
+        List<ConcertTicket> vipUsers = ticketRepository.stream()
+                .filter(concertTicket -> concertTicket.isVip())
+                .collect(Collectors.toList());
+        vipUsers.stream().forEach(vipUser -> System.out.println(vipUser.getUserName()));
     }
 
     private static void displaySortedTicket(List<ConcertTicket> ticketRepository) {
         ticketRepository
                 .stream()
-                .sorted(Comparator.comparing(ConcertTicket::getPrice)).forEach(System.out::println);
+                .sorted(Comparator.comparing(concertTicket -> concertTicket.getPrice())).forEach(System.out::println);
     }
 
     private static void setAllSeats(List<ConcertTicket> ticketRepository) {
@@ -59,6 +72,7 @@ public class ConcertRunner {
                     return concertTicket;
                 })
                 .filter(concertTicket -> concertTicket.isVip())
+                .peek(concertTicket -> System.out.println("VIP type filtered: " + concertTicket))
                 .map(concertTicket -> {
                     concertTicket.setSeatType(SeatType.VIP);
                     return concertTicket;

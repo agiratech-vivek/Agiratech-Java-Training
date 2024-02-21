@@ -37,13 +37,7 @@ public class UserRunner {
         System.out.println("Please enter user name");
         String name = scanner.nextLine();
         Optional<User> userByName = UserRepository.getUserByName(name);
-        AtomicReference<String> userName = new AtomicReference<>("");
-        Optional<AtomicReference<String>> stringAtomicReference = userByName.map(user -> {
-            userName.set(user.getName());
-            return userName;
-        });
         userByName.ifPresent(System.out::println);
-        userByName.orElse(new User());
     }
 
     private static void getUserById(Scanner scanner) {

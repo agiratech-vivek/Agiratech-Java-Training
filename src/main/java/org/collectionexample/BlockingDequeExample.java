@@ -52,11 +52,11 @@ public class BlockingDequeExample {
             }
         }
 
-        // put, putFirst, putLast, take, takeFirst, takeLast blocks the thread to perform operation
-        // if dequeue is full then it will wait indefinitely for different thread to delete the item
-        // if dequeue is empty then it will wait indefinitely for different thread to populate the queue
+        // put, putFirst, putLast, take, takeFirst, takeLast blocks the runnable to perform operation
+        // if dequeue is full then it will wait indefinitely for different runnable to delete the item
+        // if dequeue is empty then it will wait indefinitely for different runnable to populate the queue
         while (true) {
-            System.out.println("BlockDeque using methods which blocks the thread");
+            System.out.println("BlockDeque using methods which blocks the runnable");
             System.out.println("Press 1 to remove a fruit\nPress 2 to add a fruit\nPress 3 to show the fruits");
             int blockOption = scanner.nextInt();
             if (blockOption == 1) {
